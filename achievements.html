@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Tom Website</title>
+    <link rel="stylesheet" type="text/css" href="stylesheet.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+    <header id="header">
+        <nav class="links" style="--items: 5;">
+         
+                <a href="index.html">Home</a>
+                <a href="information.html">Information</a>
+                <a href="achievements.html">Achivenment</a>
+                <a href="ABOUTMEANDRESOURCES.html">About Me</a>
+                <span class="line"></span>
+        </nav>
+
+
+
+</header>
+<style>
+    .homepage {
+      /* The image used */
+      background-image: url("https://wallpapercave.com/wp/wp9354158.jpg");
+    
+      /* Set a specific height */
+      min-height: 900px; 
+    
+      /* Create the parallax scrolling effect */
+      background-attachment: fixed;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+    
+    @import url('https://fonts.googleapis.com/css?family=Inconsolata|Lato:300,400,700');
+  html, body, h1, h2, h3, h4, h5, h6, p, li, ol, ul, pre {
+      margin: 0;
+      padding: 0;
+  }
+  html, body { min-height: 100%; }
+  
+  body {
+      background-color: rgb(84, 64, 40);
+      background-image: linear-gradient(to bottom, rgb(129, 129, 129), transparent);
+      color: #eee;
+      font-family: "Times New Roman", Times, serif;
+      font-size: 62.5%;
+      padding: 0 20px;
+      box-sizing: border-box;
+      z-index: -10;
+  }
+  
+  .content {
+      background-color: #fff;
+      border-radius: 8px;
+      box-sizing: border-box;
+      color: #666;
+      font-size: 1.6em;
+      line-height: 1.4em;
+      margin: 20px auto;
+      margin-top: 80px;
+      padding: 20px;
+      width: 100%;
+      max-width: 800px;
+  }
+  .content ul {
+      margin: .5em 2em;
+      padding: 0;
+  }
+  
+  #footer {
+      background-color: #246c;
+      background-image: linear-gradient(to bottom, transparent, #0009);
+      border-top: 1px solid #fff3;
+      box-shadow: inset 0 1px 0 #fff3, 0 0 32px #000;
+      overflow: hidden;
+      padding: 8px;
+      position: fixed;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 5;
+  }
+  #footer a {
+      color: #85c6f6;
+      padding: 1em 0;
+      text-decoration: none;
+  }
+  #footer ul {
+      display: flex;
+      list-style: none;
+      justify-content: center;
+      font-size: 2em;
+      font-weight: 300;
+  }
+  #footer ul li {
+      padding: 0 .5em;
+  }
+  
+  /* Appearance */
+  .links {
+      background-color: rgb(83, 67, 38);
+      background-image: linear-gradient(to bottom, #0003, transparent);
+      border-bottom: 1px solid #0003;
+      box-shadow: 0 0 32px #0003;
+      font-size: 2em;
+      font-weight: 300;
+  }
+  .links > a {
+      color: #ffffff;
+      padding: .75em;
+      text-align: center;
+      text-decoration: none;
+      transition: all .5s;
+  }
+  .links > a:hover {
+      background: #ffffff06;
+      color: rgb(201, 201, 201);
+  }
+  .links > .line {
+      background: rgb(201, 201, 201);
+      height: 1px;
+      pointer-events: none;
+  }
+  
+  /* The Magic */
+  #header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 10;
+  }
+  .links {
+      display: grid;
+      grid-template-columns: repeat(var(--items), 1fr);
+      position: relative;
+  }
+  .links > .line {
+      opacity: 0;
+      transition: all .5s;
+      position: absolute;
+      bottom: 0;
+      left: var(--left, calc(100% / var(--items) * (var(--index) - 1)));
+      width: var(--width, calc(100% / var(--items)));
+      --index: 0;
+  }
+  .links > a:hover ~ .line {
+      opacity: 1;
+  }
+  
+  .links > a:nth-of-type(1):hover ~ .line { --index: 1; }
+  .links > a:nth-of-type(2):hover ~ .line { --index: 2; }
+  .links > a:nth-of-type(3):hover ~ .line { --index: 3; }
+  .links > a:nth-of-type(4):hover ~ .line { --index: 4; }
+  .links > a:nth-of-type(5):hover ~ .line { --index: 5; }
+  .links > a:nth-of-type(6):hover ~ .line { --index: 6; }
+  .links > a:nth-of-type(7):hover ~ .line { --index: 7; }
+  .links > a:nth-of-type(8):hover ~ .line { --index: 8; }
+  .links > a:nth-of-type(9):hover ~ .line { --index: 9; }
+  .links > a:nth-of-type(10):hover ~ .line { --index: 10; }
+  .links > a:last-of-type:hover ~ .line { --index: var(--items); }
+  
+  
+  
+  
+  
+  .sentence {
+      color: rgb(255, 255, 255);
+  }
+  </style>
+  
+  
+    <div class="scroll">
+  
+  </div>
+  
+        
+  
+  
+  
+  
+  
+  
+                  <div class="homepage"></div>
+  
+                  <div style="height:800px;background-color: rgba(0, 0, 0, 0.2) ;font-size:36px">
+          <p class="sentence">
+            Despite being 40 years old, Ronaldo continues to perform at a high level. In the 2023–24 season, he secured the Saudi Pro League Golden Boot with 35 goals and led Al-Nassr to victory in the Arab Club Champions Cup. However, his quest for continental success with Al-Nassr faced a setback with a semi-final exit in the AFC Champions League. 
+            Wikipedia
+            +5
+            The Sun
+            +5
+            talkSPORT
+            +5
+            talkSPORT
+            
+            Ronaldo's enduring excellence and record-breaking feats solidify his legacy as one of football's all-time greats.
+          </p>
+          <div style="display: flex; justify-content: center;">
+              <iframe width="560" height="315" src="https://www.youtube.com/embed/hvSDbX790rI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen=""></iframe>
+          </div>
+          <p class="text2">
+            Major Team Honors (34 Trophies)
+            Club Achievements
+            Sporting CP:           
+            Supertaça Cândido de Oliveira: 2002          
+            Manchester United:          
+            Premier League: 2006–07, 2007–08, 2008–09          
+            FA Cup: 2003–04          
+            Football League Cup: 2005–06, 2008–09
+            FA Community Shield: 2007        
+            UEFA Champions League: 2007–08           
+            FIFA Club World Cup: 2008          
+            Real Madrid:         
+            La Liga: 2011–12, 2016–17         
+            Copa del Rey: 2010–11, 2013–14      
+            Supercopa de España: 2012, 2017
+            
+            UEFA Champions League: 2013–14, 2015–16, 2016–17, 2017–18
+            
+            UEFA Super Cup: 2014, 2017
+            
+            FIFA Club World Cup: 2014, 2016, 2017
+            
+            Juventus:
+            
+            Serie A: 2018–19, 2019–20
+            
+            Coppa Italia: 2020–21
+            
+            Supercoppa Italiana: 2018, 2020
+            
+            Al-Nassr:
+            
+            Arab Club Champions Cup: 2023
+            
+            International Achievements with Portugal
+            UEFA European Championship: 2016
+            
+            UEFA Nations League: 2018–19
+
+
+            
+            🥇 Individual Awards
+            Ballon d'Or: 2008, 2013, 2014, 2016, 2017
+            
+            FIFA World Player of the Year: 2008
+            
+            The Best FIFA Men's Player: 2016, 2017
+            
+            European Golden Shoe: 2007–08, 2010–11, 2013–14, 2014–15
+            
+            UEFA Champions League Top Scorer: 2007–08, 2012–13, 2013–14, 2014–15, 2015–16, 2016–17, 2017–18
+            
+            Premier League Golden Boot: 2007–08
+            
+            Pichichi Trophy (La Liga Top Scorer): 2010–11, 2013–14, 2014–15
+            
+            Capocannoniere (Serie A Top Scorer): 2020–21
+            
+            Saudi Pro League Golden Boot: 2023–24
+            
+            Globe Soccer Awards:
+            
+            Fans' Favourite Player of the Year: 2023
+            
+            Best Middle East Player: 2023
+            
+            Maradona Award for Best Goal Scorer of the Year: 2023
+            Wikipedia
+            News18
+            +2
+            Wikipedia
+            +2
+            Wikipedia
+            +2
+             
+
+            📊 Career Statistics (as of April 2025)
+            Total Career Goals: 934 goals in official matches
+            
+            Club Goals:
+            
+            Real Madrid: 450
+            
+            Manchester United: 145
+            
+            Juventus: 101
+            
+            Al-Nassr: 97
+            
+            Sporting CP: 5
+            
+            International Goals (Portugal): 136 goals in 219 appearances
+            Sportsdunia
+            talkSPORT
+            +2
+            The Sun
+            +2
+            talkSPORT
+            +2
+            
+
+            🌍 World Records
+            Most International Goals: 136
+            
+            Most International Caps: 219            
+            Most Goals in UEFA Champions League: 140            
+            Most Goals in UEFA European Championship: 14          
+            Only Player to Score in Five FIFA World Cups: 2006, 2010, 2014, 2018, 2022           
+            First Player to Score in Ten, Eleven, and Twelve Consecutive International Tournaments
+            Only Player to Win League Titles in England, Spain, and Italy
+          </p>
+          <style>
+              .text2 {
+                  height: 750px;
+  
+              }
+          </style>
+                              <div class="hoverbox">
+  
+          <style>
+  
+              .container {
+                position: relative;
+                width: 450px;
+                z-index: 1;
+              }
+              
+              .image {
+                display: block;
+                width: 450px;
+                height: 450px;
+              
+              }
+              
+              .overlay {
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                background-color: #db630e;
+                overflow: hidden;
+                width: 100%;
+                height: 0;
+                transition: .5s ease;
+                z-index: 2;
+              }
+              
+              .container:hover .overlay {
+                height: 450px;
+                
+              }
+              
+              .text {
+                color: white;
+                font-size: 20px;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                -webkit-transform: translate(-50%, -50%);
+                -ms-transform: translate(-50%, -50%);
+                transform: translate(-50%, -50%);
+                text-align: center;
+          
+              }
+              </style>
+
+              <style>
+                  div.gallery {
+                    margin: 5px;
+                    border: 1px solid #ccc;
+                    float: center;
+                    width: 180px;
+                  }
+                  
+                  div.gallery:hover {
+                    border: 1px solid #777;
+                  }
+                  
+                  div.gallery img {
+                    width: 100%;
+                    height: auto;
+                  }
+                  
+                  div.desc {
+                    padding: 15px;
+                    text-align: center;
+                  }
+                  </style>
+  </body>
+</html>
